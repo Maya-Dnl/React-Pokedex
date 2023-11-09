@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState } from 'react';
 import Pokemon from '../models/pokemon';
-import './pokemon-card.css'
+import './pokemon-card.css';
   
 type Props = {
   pokemon: Pokemon,
@@ -21,6 +21,10 @@ const PokemonCard: FunctionComponent<Props> = ({pokemon, colorCard = "#009688"})
     setColor("#4db6ac");
   }
 
+  const formatDate = (date: Date): string => {
+    return `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`;
+  }
+
 
   return (
     <div className="col s6 m4" onMouseEnter={mouseEnterColorCard} onMouseLeave={mouseLeaveColorCard}>
@@ -31,7 +35,7 @@ const PokemonCard: FunctionComponent<Props> = ({pokemon, colorCard = "#009688"})
         <div className="card-stacked">
           <div className="card-content white-text">
             <p>{pokemon.name}</p>
-            <p><small>{pokemon.created.toString()}</small></p>
+            <p><small>{formatDate(pokemon.created)}</small></p>
           </div>
         </div>
       </div> 
