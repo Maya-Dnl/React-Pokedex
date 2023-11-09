@@ -5,12 +5,11 @@ import './pokemon-card.css'
 type Props = {
   pokemon: Pokemon,
   colorCard?: string,
-  initColorCard: string
 };
-  
-// const initColorCard = "#4db6ac";
 
-const PokemonCard: FunctionComponent<Props> = ({pokemon, initColorCard = "#4db6ac", colorCard = "#009688"}) => {
+const  initColorCard = "#4db6ac";
+
+const PokemonCard: FunctionComponent<Props> = ({pokemon, colorCard = "#009688"}) => {
 
   const [color, setColor] = useState<string>(initColorCard);
 
