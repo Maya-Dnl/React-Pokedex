@@ -4,6 +4,7 @@ import Pokemon from '../models/pokemon';
 import POKEMONS from '../models/mock-pokemon';
 import formatDate from '../helpers/format-date';
 import formatType from '../helpers/format-type';
+import './pokemon-details.css';
   
 type Params = { id: string };
   
