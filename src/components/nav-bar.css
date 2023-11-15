@@ -1,8 +1,25 @@
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 335px;
+  margin-right: 350px;
+}
+
 .content-css-nav-bar {
   display: flex;
   align-items: center;
+  font-size: 16px;
+  margin-bottom: 50px;
 }
 
-.justify-content-items {
+.color-style-link {
+  color: white;
+  transition: color 0.3s ease;
+  margin-right: 50px;
   justify-content: right;
+}
+
+.color-style-link:hover {
+  color: #26a69a;
 }

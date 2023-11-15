@@ -5,15 +5,15 @@ import './nav-bar.css'
 
 const NavBar: FunctionComponent = () => {
   return (
-    <div className="nav-wrapper teal lighten-4 content-css-nav-bar">
-      <Link to="/" className="brand-logo">
-        <Logo />
-      </Link>
-      <div className='justify-content-items'>
-        <div>MyPokemons</div>
-        <div>MyBadges</div>
-        <div>MyProfile</div>
+    <div className="nav-wrapper teal lighten-3 content-css-nav-bar">
+      <div className="logo-container">
+        <Link to="/">
+          <Logo />
+        </Link>
       </div>
+      <Link to="#" className='color-style-link'>MyPokemons</Link>
+      <Link to="#" className='color-style-link'>MyBadges</Link>
+      <Link to="#" className='color-style-link'>MyProfile</Link>
     </div>
   );
 }
