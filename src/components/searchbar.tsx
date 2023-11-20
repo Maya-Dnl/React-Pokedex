@@ -2,11 +2,10 @@ import React, {useState} from "react";
 
 const SearchBar = () => {
 
-  const [query, setQuery] = useState("");
+  const [userQuery, setUserQuery] = useState("");
 
     function searchPokemonType(element: string) {
-        // element.preventDefault()
-        setQuery(element.valueOf)
+      setUserQuery(element.valueOf)
     }
 
     return (
@@ -14,8 +13,8 @@ const SearchBar = () => {
         <input type="text"
                className="input-search"
                placeholder="Search"
-               onChange={searchPokemonType}
-               value={query}
+               OnChange={searchPokemonType}
+               value={userQuery}
         />
       </div>
 
