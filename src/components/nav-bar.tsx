@@ -4,6 +4,7 @@ import Logo from '../components/logo';
 import './nav-bar.css'
 
 const NavBar: FunctionComponent = () => {
+
   return (
     <div className="nav-wrapper teal lighten-3 content-css-nav-bar">
       <div className="logo-container">
