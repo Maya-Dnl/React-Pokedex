@@ -15,7 +15,7 @@ export default class PokemonService {
       .catch(error => this.handleError(error));
   }
 
-  static updatePokémon(pokemon: Pokemon): Promise<Pokemon> {
+  static updatePokemon(pokemon: Pokemon): Promise<Pokemon> {
     return fetch(`http://localhost:3001/pokemons/${pokemon.id}` , {
       method: `PUT`,
       body: JSON.stringify(pokemon),
@@ -23,6 +23,13 @@ export default class PokemonService {
     })
     .then(response => response.json())
     .catch(error => this.handleError(error));
+  }
+
+  static deletePokemon(pokemon: Pokemon): Promise<{}> {
+    return fetch(`http://localhost:3001/pokemons/${pokemon.id}` , {
+    method: `DELETE`,
+    headers: { 'Content-Type': 'application/json' }
+    })
   }
  
   static isEmpty(data: Object): boolean {

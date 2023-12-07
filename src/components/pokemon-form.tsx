@@ -130,8 +130,12 @@ const PokemonForm: FunctionComponent<Props> = ({pokemon}) => {
       pokemon.hp = form.hp.value;
       pokemon.cp = form.cp.value;
       pokemon.types = form.types.value;
-      PokemonService.updatePokémon(pokemon).then(() => history.push(`/pokemon-list/${pokemon.id}`));
+      PokemonService.updatePokemon(pokemon).then(() => history.push(`/pokemon-list/${pokemon.id}`));
     }
+  }
+
+  const deletePokemon = () => {
+    PokemonService.deletePokemon(pokemon).then(() => history.push(`/pokemon-list`));
   }
    
   return (
@@ -141,6 +145,9 @@ const PokemonForm: FunctionComponent<Props> = ({pokemon}) => {
           <div className="card hoverable"> 
             <div className="card-image">
               <img src={pokemon.picture} alt={pokemon.name} style={{width: '250px', margin: '0 auto'}}/>
+              <span className="btn-floating halfway-fab waves-effect waves-light">
+                <i onClick={deletePokemon} className='material-icons'>Delete</i>
+              </span>
             </div>
             <div className="card-stacked">
               <div className="card-content">
