@@ -4,6 +4,7 @@ import Pokemon from '../models/pokemon';
 import PokemonCard from '../components/pokemon-card';
 import PokemonService from '../services/pokemon-service';
 import "./pokemon-list.css";
+import { Link } from 'react-router-dom';
   
 const PokemonList: FunctionComponent = () => {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
@@ -24,6 +25,11 @@ const PokemonList: FunctionComponent = () => {
         <PokemonCard key={pokemon.id} pokemon={pokemon}/>
       ))}
       </div>
+      <Link className='btn-floating btn-large waves-effect waves-light red z-depth-3'
+        style={{position: "fixed", bottom: "25px", right: "25px"}}
+        to="/pokemon/add">
+        <i className="bi bi-plus-circle-fill"></i>
+      </Link>
     </div>
   );
 };
